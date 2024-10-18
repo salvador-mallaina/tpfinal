@@ -1,39 +1,28 @@
 let anchoPantalla =640;
 let altoPantalla =480;
-let misTextos;
+let misTextos =[];
 let  anchoTexto ;
 let tamTexto;
 let  inicioTexto ;
+let posTextoActual=0
 
-let pantallaActual =0;
+  let pantallaActual =0;
 let posXBoton =580;
 let posYBoton =420;
 let anchoBoton =80;
 let altoBoton =80;
 let misImagenes =[];
-let i = 1
+let cantImgs =18
   let y =4
+  let t=1
 
-  function preload() {
-  misImagenes[0]=loadImage("data/Designer0.jpg");
-  misImagenes[1]=loadImage("data/Designer1.jpg");
-  misImagenes[2]=loadImage("data/Designer2.jpg");
-  misImagenes[3]=loadImage("data/designer3.jpg");
-  misImagenes[4]=loadImage("data/designer4.jpg");
-  misImagenes[5]=loadImage("data/designer5.jpg");
-  misImagenes[6]=loadImage("data/designer6.jpg");
-  misImagenes[7]=loadImage("data/designer7.jpg");
-  misImagenes[8]=loadImage("data/designer8.jpg");
-  misImagenes[9]=loadImage("data/designer9.jpg");
-  misImagenes[10]=loadImage("data/designer10.jpg");
-  misImagenes[11]=loadImage("data/designer11.jpg");
-  misImagenes[12]=loadImage("data/designer12.jpg");
-  misImagenes[13]=loadImage("data/designer13.jpg");
-  misImagenes[14]=loadImage("data/designer14.jpg");
-  misImagenes[15]=loadImage("data/designer15.jpg");
-  misImagenes[16]=loadImage("data/designer16.jpg");
-  misImagenes[17]=loadImage("data/designer17.jpg");
-  //misTextos =  loadStrings('data/aventura.odt');
+  let musica;
+
+function preload() {
+  for (let i=0; i<cantImgs; i++) {
+    misImagenes[i]=loadImage("data/Designer"+i+".jpg");
+  }
+  misTextos[posTextoActual]=  loadStrings('data/aventura.txt');
 }
 
 
@@ -44,7 +33,7 @@ function setup() {
 
 function draw() {
   background(0);
-
+  reload();
   if (pantallaActual==0) {
     pantalla1Boton(0)
   } else if (pantallaActual==1) {
@@ -75,7 +64,7 @@ function draw() {
     pantalla1Boton(13)
   } else if (pantallaActual==14) {
     y = 1
-      i= -4
+      t= -4
       pantallaCon2Botones(14)
   } else if (pantallaActual==15) {
     pantalla1Boton(15)
@@ -87,7 +76,7 @@ function draw() {
 }
 function mousePressed() {
   clickBotonCuadrado();
-  clickBotonNo()
-    clickBotonSi()
-    BotonFinal()
+  clickBotonNo();
+    clickBotonSi();
+    BotonFinal();
 }

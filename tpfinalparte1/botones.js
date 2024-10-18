@@ -15,7 +15,7 @@ function clickBotonNo() {
     mouseX < 160+anchoBoton &&
     mouseY > 340 &&
     mouseY < 340+altoBoton) {
-    pantallaActual= pantallaActual+i
+    pantallaActual= pantallaActual+t
   }
 }
 function clickBotonSi() {
@@ -36,7 +36,7 @@ function BotonFinal() {
     mouseY > 340 &&
     mouseY < 340+50) {
     pantallaActual = 0
-      i = 1
+      t = 1
       y =4
   }
 }
