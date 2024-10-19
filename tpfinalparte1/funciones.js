@@ -6,12 +6,12 @@ function reload() {
 
   textSize(tamTexto);
 }
-function pantalla1Boton(imagen, obtenerTextActual) {
+function pantalla1Boton(imagen) {
   fill(200, 50, 40);
   image(misImagenes[imagen], 0, 0, anchoPantalla, altoPantalla);
   rect( posXBoton, posYBoton, anchoBoton, altoBoton );
   fill(0, 255, 255);
-  text( misTextos[obtenerTextActual], inicioTexto, inicioTexto, anchoTexto );
+  
 }
 function pantallaCon2Botones(imagen) {
   fill(255);

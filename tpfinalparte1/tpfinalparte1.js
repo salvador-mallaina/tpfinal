@@ -25,9 +25,11 @@ function preload() {
   misTextos[posTextoActual]=  loadStrings('data/aventura.txt');
 }
 
+musica=loadSound("data/mario.mp3")
 
 function setup() {
   createCanvas( anchoPantalla, altoPantalla);
+  musica.loop();
 }
 
 
