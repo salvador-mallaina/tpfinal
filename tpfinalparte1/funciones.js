@@ -26,8 +26,8 @@ function pantallaCon2Botones(imagen,texto) {
 function pantallaFinal(imagen,texto) {
   fill(0, 150, 0),
     image(misImagenes[imagen], 0, 0, anchoPantalla, altoPantalla);
-  rect(270, 340, 100, 50);
+  rect(370, 340, 100, 50);
    text( misTextos[texto],  inicioTexto,   inicioTexto,   anchoTexto   );
     fill(0);
-  text(accion3,290,380);
+  text(accion3,390,380);
 }
