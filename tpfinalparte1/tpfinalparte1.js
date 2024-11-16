@@ -9,18 +9,17 @@ let misTextos =[];
 let  anchoTexto ;
 let tamTexto;
 let  inicioTexto ;
-let accion1 ="Si"
-  let accion2="No"
+
   let accion3="Fin"
 
 
   let pantallaActual =0;
-let posXBoton =580;
-let posYBoton =420;
+let posXBoton =273;
+let posYBoton =270;
 let anchoBoton =80;
-let altoBoton =80;
+let altoBoton =30;
 let misImagenes =[];
-let cantImgs =19
+let cantImgs =22
   let y =5
   let t=1
 
