@@ -1,17 +1,32 @@
-class personaje{
-  constructor(posX, posY, ancho, alto, miColor) {
-    this.posX = posX;
-    this.posY = posY;
-    this.alto = alto;
-    this.ancho = ancho;
-    this.colorDeFondo = miColor;
-    this.vida=miVida
-    this.bala
+
+class personaje {
+  constructor() {
+    this.posX = width/2;
+    this.posY = 440;
+    this.vidas = 1;
+    this.combustuble()
   }
-  dibujar(){
+
+  dibujar() {
+    fill(0, 255, 0);
+    ellipse(this.posX, this.posY, 30, 30);
   }
-  
-  mover(){
+
+  moverDerecha() {
+    if (this.posX < this.rioDerecha.posX+22) {
+      this.posX = this.posX + 3;
+    }
   }
-  
+  moverIzquierda() {
+    if (this.posX > this.rio.posX+22) {
+      this.posX = this.posX -3 ;
+    }
+  }
+  teclaPresionada() {
+    if (keyCode === RIGHT_ARROW) {
+      this.moverDerecha();
+    } else if (keyCode === LEFT_ARROW) {
+      this.moverIzquierda();
+    }
+  }
 }
