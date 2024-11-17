@@ -11,7 +11,15 @@ class Juego {
     this.aviones = [];
     this.cantEnemigos = 10;
     this.combustible= new combustible();
+    this.bidones = [];
 
+
+
+   for (let i=0; i<this.cantEnemigos; i++) {
+      let posXAleatoria = random(50, width-50);
+      let ubicacion = random(250) > 25;
+      this.bidones.push(new bidon(posXAleatoria, ubicacion));
+    }
 
     for (let i=0; i<this.cantEnemigos; i++) {
       let posXAleatoria = random(50, width-50);
@@ -35,6 +43,12 @@ class Juego {
       this.personaje.dibujar();
       this.combustible.dibujar();
       this.combustible.gastoDeCombustible();
+      
+      
+      
+       for (let i=0; i<this.cantEnemigos; i++) {
+        this.bidones[i].dibujar();
+      }
      
 
         for (let i=0; i<this.cantEnemigos; i++) {

@@ -1,3 +1,10 @@
+//salvador mallaina
+//comision 4
+//profe se que esta incompleto el tp pero no llegue con el tiempo 
+
+
+
+
 let juego;
 
 function setup() {

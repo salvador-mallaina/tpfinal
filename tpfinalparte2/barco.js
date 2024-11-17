@@ -10,7 +10,7 @@ class barco{
   dibujar() {
     fill(0,0,220);
     rect(this.posX, this.posY, 15, 15);
-    this.posY = this.posY + this.velocidad;
+   this.posY = this.posY + this.velocidad;
   }
 
   mover() {
