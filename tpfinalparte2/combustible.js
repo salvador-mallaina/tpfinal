@@ -8,6 +8,7 @@ class combustible {
   }
 
   gastoDeCombustible() {
+   
     if ( this.alto > 0) {
       this.alto = this.alto - 0.10;
       

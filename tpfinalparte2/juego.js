@@ -35,9 +35,9 @@ class Juego {
       this.personaje.dibujar();
       this.combustible.dibujar();
       this.combustible.gastoDeCombustible();
+     
 
-
-      for (let i=0; i<this.cantEnemigos; i++) {
+        for (let i=0; i<this.cantEnemigos; i++) {
         this.aviones[i].dibujar();
       }
 
@@ -45,7 +45,7 @@ class Juego {
         this.barcos[t].dibujar();
       }
       this.evaluarCombustible();
-      
+
       this.evaluarColisionPersonajeConEnemigos();
     } else {
       if (!this.gana) {
@@ -79,11 +79,24 @@ class Juego {
         this.gana = false;
       }
     }
+    for (let i=0; i<this.cantEnemigos; i++) {
+      this.barcos[i].dibujar();
+      if (
+        dist(
+        this.barcos[i].posX,
+        this.barcos[i].posY,
+        this.personaje.posX,
+        this.personaje.posY
+        ) < 20) {
+        this.juega = false;
+        this.gana = false;
+      }
+    }
   }
 
 
   evaluarCombustible() {
-    if ( this.combustible.alto() == 0); {
+    if ( this.combustible.alto <= 1) {
 
       this.juega = false;
       this.gana = false;

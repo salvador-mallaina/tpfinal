@@ -4,6 +4,7 @@ class personaje {
     this.posX = width/2;
     this.posY = 440;
     this.vidas = 1;
+   this.bala = new bala();
    
   }
 
