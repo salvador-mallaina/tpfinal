@@ -1,18 +1,34 @@
-class barco{
-   constructor(posX, ubicacion) {
+class barco {
+  constructor(posX) {
     this.posX = posX;
-   
-      this.posY = random(-200, -400);
-      this.velocidad = random(0.5,0.3);
-    
+    this.posY = random(-200, -400);
+    this.velocidad = random(0.5, 0.3);
+    this.vida = true;
   }
 
   dibujar() {
-    fill(0,0,220);
-    rect(this.posX, this.posY, 15, 15);
-   this.posY = this.posY + this.velocidad;
+    if ( this.vida) {
+      fill(0, 0, 220);
+      image(imgBarcos,this.posX, this.posY, 30, 30);
+      this.posY = this.posY + this.velocidad;
+    }
+  }
+  matar() {
+    this.vida= false
   }
 
-  mover() {
+  haTocadoLaBala(bala) {
+    if ( dist(this.posX, this.posY, bala.posX, bala.posY) < 15) {
+      this.matar()
+       bala.destruir()
+    }
+  }
+
+  reubicar() {
+    if (this.posY > height && this.vida) {
+      this.posY = random(-20, -40); 
+      this.posX = random(175, 460);  
+
+    }
   }
 }
